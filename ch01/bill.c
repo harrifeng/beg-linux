@@ -1,5 +1,5 @@
 #include <stdio.h>
 
-void bill(char arg) {
-    printf("fred: we passed %s\n", arg);
+void bill(char *arg) {
+    printf("bill: we passed %s\n", arg);
 }
