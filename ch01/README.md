@@ -30,3 +30,27 @@ bill: we passed Hello World
 [05:38:07] hfeng@ ch01 (master) $ ./main2.out
 bill: we passed Hello World
 ```
+
+# ldd is important to find shared library
+```
+$ ldd /bin/vim
+	linux-vdso.so.1 =>  (0x00007ffd437be000)
+	libm.so.6 => /lib64/libm.so.6 (0x00007f174f3c6000)
+	libselinux.so.1 => /lib64/libselinux.so.1 (0x00007f174f19e000)
+	libtinfo.so.5 => /lib64/libtinfo.so.5 (0x00007f174ef74000)
+	libacl.so.1 => /lib64/libacl.so.1 (0x00007f174ed6b000)
+	libgpm.so.2 => /lib64/libgpm.so.2 (0x00007f174eb63000)
+	libdl.so.2 => /lib64/libdl.so.2 (0x00007f174e95f000)
+	libperl.so => /usr/lib64/perl5/CORE/libperl.so (0x00007f174e5d1000)
+	libpthread.so.0 => /lib64/libpthread.so.0 (0x00007f174e3b4000)
+	libc.so.6 => /lib64/libc.so.6 (0x00007f174dff1000)
+	/lib64/ld-linux-x86-64.so.2 (0x000055d844b45000)
+	libpcre.so.1 => /lib64/libpcre.so.1 (0x00007f174dd8f000)
+	libattr.so.1 => /lib64/libattr.so.1 (0x00007f174db89000)
+	libncurses.so.5 => /lib64/libncurses.so.5 (0x00007f174d962000)
+	libresolv.so.2 => /lib64/libresolv.so.2 (0x00007f174d748000)
+	libnsl.so.1 => /lib64/libnsl.so.1 (0x00007f174d52e000)
+	libcrypt.so.1 => /lib64/libcrypt.so.1 (0x00007f174d2f7000)
+	libutil.so.1 => /lib64/libutil.so.1 (0x00007f174d0f4000)
+	libfreebl3.so => /lib64/libfreebl3.so (0x00007f174cef0000)
+```
